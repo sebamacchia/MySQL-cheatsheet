@@ -8,4 +8,4 @@ SHOW FIELDS FROM table / DESCRIBE table;
 SHOW CREATE TABLE table;
 SHOW PROCESSLIST;
 KILL process_number;
-```bash
+```
