@@ -1,30 +1,28 @@
 # MySQL-cheatsheet
 
-## Browsing
-```bash
-SHOW DATABASES;
-SHOW TABLES;
-SHOW FIELDS FROM table / DESCRIBE table;
-SHOW CREATE TABLE table;
-SHOW PROCESSLIST;
-KILL process_number;
-```
+## Basics
+USE sql_store;
+SELECT *
+FROM customers
+WHERE state = ‘CA’
+ORDER BY first_name
+LIMIT 3;
 
-## Select
-```bash
-SELECT * FROM table;
-SELECT * FROM table1, table2;
-SELECT field1, field2 FROM table1, table2;
-SELECT ... FROM ... WHERE condition
-SELECT ... FROM ... WHERE condition GROUPBY field;
-SELECT ... FROM ... WHERE condition GROUPBY field HAVING condition2;
-SELECT ... FROM ... WHERE condition ORDER BY field1, field2;
-SELECT ... FROM ... WHERE condition ORDER BY field1, field2 DESC;
-SELECT ... FROM ... WHERE condition LIMIT 10;
-SELECT DISTINCT field1 FROM ...
-SELECT DISTINCT field1, field2 FROM ...
-```
+• SQL is not a case-sensitive language.
+• In MySQL, every statement must be terminated with a semicolon.
 
+## Comments
+We use comments to add notes to our code.
+—- This is a comment and it won’t get executed.
 
-## Operate on MAC
-open MySql Workbrech
+## SELECT Clause
+—- Using expressions
+SELECT (points * 10 + 20) AS discount_factor
+FROM customers
+Order of operations:
+• Parenthesis
+• Multiplication / division
+• Addition / subtraction
+—- Removing duplicates
+SELECT DISTINCT state
+FROM customers 
