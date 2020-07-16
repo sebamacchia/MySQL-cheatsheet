@@ -6,11 +6,8 @@ USE sql_store;
 SELECT *
 
 FROM customers
-
 WHERE state = ‘CA’
-
 ORDER BY first_name
-
 LIMIT 3;
 
 • SQL is not a case-sensitive language.
