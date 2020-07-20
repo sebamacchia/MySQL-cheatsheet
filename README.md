@@ -28,12 +28,13 @@ We use comments to add notes to our code.
 
 ```sql
 -- Using expressions
-SELECT (points \* 10 + 20)
+SELECT (points * 10 + 20)
 AS discount_factor
 FROM customers
 ```
 
 Order of operations:
+
 • Parenthesis
 
 • Multiplication / division
@@ -120,7 +121,7 @@ WHERE first*name LIKE ‘b%’
 -- Returns customers whose first name starts with a
 SELECT *
 FROM customers
-WHERE first*name REGEXP ‘^a’
+WHERE first_name REGEXP ‘^a’
 ```
 
 • ^: beginning of a string
@@ -153,6 +154,13 @@ WHERE first_name REGEXP ‘b[ru]’
 SELECT *
 FROM customers
 WHERE phone IS NULL
+```
+
+```sql
+-- Returns customers who don’t null on phone
+SELECT *
+FROM customers
+WHERE phone IS NOT NULL
 ```
 
 ## ORDER BY Clause
